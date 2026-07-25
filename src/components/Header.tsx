@@ -121,7 +121,7 @@ const Header: React.FC<HeaderProps> = ({ onNavigate, onBookCall }) => {
                 >
                   <a href="#decode-plans" onClick={(e) => { e.preventDefault(); setActiveDropdown(activeDropdown === 'decode' ? null : 'decode'); }}>Decode Plans <span className="dropdown-arrow"></span></a>
                   {activeDropdown === 'decode' && (
-                    <div className="mega-menu" style={{ width: '900px', left: '50%', transform: 'translateX(-65%)' }}>
+                    <div className="mega-menu" style={{ width: '900px', right: 0, left: 'auto', transform: 'none' }}>
                       <div className="mega-menu-grid">
                         <div>
                           <h3 className="mega-menu-title">Health Insurance Decoder</h3>
@@ -159,7 +159,7 @@ const Header: React.FC<HeaderProps> = ({ onNavigate, onBookCall }) => {
                 >
                   <a href="#claims" onClick={(e) => { e.preventDefault(); setActiveDropdown(activeDropdown === 'claims' ? null : 'claims'); }}>Claims <span className="dropdown-arrow"></span></a>
                   {activeDropdown === 'claims' && (
-                    <div className="mega-menu small-dropdown">
+                    <div className="mega-menu small-dropdown" style={{ right: '-50px', left: 'auto', transform: 'none' }}>
                       <div className="dropdown-section">
                         <h4 className="dropdown-heading">New to Shiva Insurance?</h4>
                         <a href="#understand" className="dropdown-link-item" onClick={handleSubOptionClick}>
