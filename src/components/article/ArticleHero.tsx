@@ -24,13 +24,13 @@ const ArticleHero: React.FC<ArticleHeroProps> = ({ topic = 'Term Insurance' }) =
             <img src="https://ui-avatars.com/api/?name=Mahavir+Chopra&background=0D8ABC&color=fff" alt="Mahavir Chopra" className="author-img" />
             <div className="author-info">
               <span className="author-name">Mahavir Chopra</span>
-              <span className="author-role">Founder, Siva Insurance</span>
+              <span className="author-role">Founder, Shiva Insurance</span>
             </div>
           </div>
           <div className="author">
-            <img src="https://ui-avatars.com/api/?name=Siva+Team&background=2e9f68&color=fff" alt="Siva Team" className="author-img" />
+            <img src="https://ui-avatars.com/api/?name=Shiva+Team&background=2e9f68&color=fff" alt="Shiva Team" className="author-img" />
             <div className="author-info">
-              <span className="author-name">Siva Editorial</span>
+              <span className="author-name">Shiva Editorial</span>
               <span className="author-role">Research Team</span>
             </div>
           </div>

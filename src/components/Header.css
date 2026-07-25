@@ -127,7 +127,7 @@
 }
 
 .nav-links > li {
-  position: static;
+  position: relative;
   padding: 0.75rem 0;
 }
 
@@ -170,8 +170,7 @@
 .mega-menu {
   position: absolute;
   top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0;
   background-color: var(--white);
   box-shadow: 0 10px 25px rgba(0,0,0,0.1);
   border-radius: var(--radius-md);
@@ -279,8 +278,8 @@
 
 .small-dropdown {
   width: 320px;
-  left: 0;
-  transform: translateX(-40%);
+  right: 0;
+  left: auto;
   padding: 1.5rem;
 }
 

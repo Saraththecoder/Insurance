@@ -27,7 +27,7 @@ const Footer: React.FC<FooterProps> = ({ onBookCall }) => {
       <div className="container footer-container">
         <div className="footer-grid">
           <div className="footer-brand">
-            <div className="logo-text">siva</div>
+            <div className="logo-text">shiva</div>
             <p className="footer-desc">
               India's first and only neutral insurance platform. We simplify insurance for you, so you can buy with confidence.
             </p>
@@ -40,7 +40,7 @@ const Footer: React.FC<FooterProps> = ({ onBookCall }) => {
           </div>
           
           <div className="footer-links">
-            <h4>Siva Insurance</h4>
+            <h4>Shiva Insurance</h4>
             <ul>
               <li><a href="#about">About Us</a></li>
               <li><a href="#careers">Careers</a></li>
@@ -71,7 +71,7 @@ const Footer: React.FC<FooterProps> = ({ onBookCall }) => {
         </div>
         
         <div className="footer-bottom">
-          <p>&copy; {new Date().getFullYear()} Siva Insurance. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Shiva Insurance. All rights reserved.</p>
           <div className="legal-links">
             <a href="#privacy">Privacy Policy</a>
             <a href="#terms">Terms of Service</a>

@@ -17,7 +17,7 @@ const MediaMentions: React.FC = () => {
         <div className="media-articles">
           <div className="article-card">
             <h4>BBC</h4>
-            <p>"Siva Insurance is bringing a much needed transparency to the opaque world of Indian insurance. It's an essential tool before buying any policy."</p>
+            <p>"Shiva Insurance is bringing a much needed transparency to the opaque world of Indian insurance. It's an essential tool before buying any policy."</p>
           </div>
           <div className="article-card">
             <h4>Economic Times</h4>
@@ -25,7 +25,7 @@ const MediaMentions: React.FC = () => {
           </div>
           <div className="article-card">
             <h4>Mint</h4>
-            <p>"The community driven aspect of Siva Insurance sets it apart. Real people sharing real claim experiences is a game changer for buyers."</p>
+            <p>"The community driven aspect of Shiva Insurance sets it apart. Real people sharing real claim experiences is a game changer for buyers."</p>
           </div>
         </div>
       </div>
