@@ -118,10 +118,11 @@ const Header: React.FC<HeaderProps> = ({ onNavigate, onBookCall }) => {
                 <li 
                   onMouseEnter={() => setActiveDropdown('decode')}
                   className={activeDropdown === 'decode' ? 'active-nav-item' : ''}
+                  style={{ position: 'static' }}
                 >
                   <a href="#decode-plans" onClick={(e) => { e.preventDefault(); setActiveDropdown(activeDropdown === 'decode' ? null : 'decode'); }}>Decode Plans <span className="dropdown-arrow"></span></a>
                   {activeDropdown === 'decode' && (
-                    <div className="mega-menu" style={{ width: '900px', right: 0, left: 'auto', transform: 'none' }}>
+                    <div className="mega-menu" style={{ width: '900px', left: '50%', transform: 'translateX(-50%)' }}>
                       <div className="mega-menu-grid">
                         <div>
                           <h3 className="mega-menu-title">Health Insurance Decoder</h3>
