@@ -33,7 +33,7 @@ const Header: React.FC<HeaderProps> = ({ onNavigate, onBookCall }) => {
             <a href="/" className="logo" onClick={(e) => { e.preventDefault(); setIsMobileMenuOpen(false); if(onNavigate) onNavigate('home'); }}>
               <span className="logo-text">
                 <span className="logo-accent"></span>
-                shiva
+                shiva insurance
               </span>
             </a>
             <nav className={`desktop-nav ${isMobileMenuOpen ? 'mobile-menu-open' : ''}`}>
