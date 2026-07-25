@@ -85,8 +85,10 @@ const ProductCards: React.FC<ProductCardsProps> = ({ onGetQuote, onLearnMore }) 
               </div>
               <h3 className="product-title">{product.title}</h3>
               <p className="product-description">{product.description}</p>
-              <button className="btn btn-outline product-btn" onClick={onGetQuote}>View Plans &rarr;</button>
-              <button className="btn btn-outline product-btn" onClick={onLearnMore}>Learn More</button>
+              <div className="product-actions">
+                <button className="btn btn-outline product-btn" onClick={onGetQuote}>View Plans &rarr;</button>
+                <button className="btn btn-outline product-btn" onClick={onLearnMore}>Learn More</button>
+              </div>
             </div>
           ))}
         </div>

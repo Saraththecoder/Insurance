@@ -49,7 +49,7 @@ const Testimonials: React.FC<TestimonialsProps> = ({ onNavigate }) => {
       <div className="container">
         <div className="testimonials-content">
           <div className="testimonials-left">
-            <h2 className="section-title text-left testi-text-animate">What people think about Beshak</h2>
+            <h2 className="section-title text-left testi-text-animate">What people think about Siva Insurance</h2>
             <div className="ratings-grid testi-text-animate">
               <div className="rating-item">
                 <span className="rating-score">4.9/5</span>
@@ -70,7 +70,7 @@ const Testimonials: React.FC<TestimonialsProps> = ({ onNavigate }) => {
             {/* We simulate the screenshot graphic here */}
             <div className="graphic-container">
               <div className="phone-mockup">
-                <div className="phone-logo">beshak</div>
+                <div className="phone-logo">siva</div>
                 <div className="phone-circle">
                   <div className="inner-circle"></div>
                 </div>

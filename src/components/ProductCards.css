@@ -72,6 +72,13 @@
   flex-grow: 1;
 }
 
+.product-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  width: 100%;
+}
+
 .product-btn {
   width: 100%;
   font-weight: 600;

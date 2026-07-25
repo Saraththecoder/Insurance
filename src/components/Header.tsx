@@ -33,7 +33,7 @@ const Header: React.FC<HeaderProps> = ({ onNavigate, onBookCall }) => {
             <a href="/" className="logo" onClick={(e) => { e.preventDefault(); setIsMobileMenuOpen(false); if(onNavigate) onNavigate('home'); }}>
               <span className="logo-text">
                 <span className="logo-accent"></span>
-                beshak
+                siva
               </span>
             </a>
             <nav className={`desktop-nav ${isMobileMenuOpen ? 'mobile-menu-open' : ''}`}>
@@ -161,7 +161,7 @@ const Header: React.FC<HeaderProps> = ({ onNavigate, onBookCall }) => {
                   {activeDropdown === 'claims' && (
                     <div className="mega-menu small-dropdown">
                       <div className="dropdown-section">
-                        <h4 className="dropdown-heading">New to Beshak?</h4>
+                        <h4 className="dropdown-heading">New to Siva Insurance?</h4>
                         <a href="#understand" className="dropdown-link-item" onClick={handleSubOptionClick}>
                           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><circle cx="10" cy="13" r="2"></circle><path d="M10 15v1"></path></svg>
                           Understand the Claim Process

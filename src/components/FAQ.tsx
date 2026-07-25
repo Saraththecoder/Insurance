@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './FAQ.css';
 
 const faqs = [
-  { question: 'What is Beshak?', answer: 'Beshak is an independent, unbiased insurance platform that helps you find the right insurance through expert advice and community insights, without taking any commissions.' },
+  { question: 'What is Siva Insurance?', answer: 'Siva Insurance is an independent, unbiased insurance platform that helps you find the right insurance through expert advice and community insights, without taking any commissions.' },
   { question: 'Do you sell insurance?', answer: 'No, we do not sell insurance directly, which allows us to remain 100% neutral. We help you choose the best plan and guide you to the official provider to purchase.' },
   { question: 'How do you make money?', answer: 'We offer premium advisory services for users who need personalized 1-on-1 guidance, and we have a subscription model for our detailed research reports.' },
   { question: 'Is my data safe with you?', answer: 'Yes. Unlike aggregator sites, we will never sell your phone number to agents. You will never receive spam calls from us.' },
