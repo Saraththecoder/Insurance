@@ -23,6 +23,7 @@ function App() {
   const handleNavigate = (page: 'home' | 'article', topic?: string) => {
     setCurrentPage(page);
     if (topic) setArticleTopic(topic);
+    window.scrollTo(0, 0);
   };
   const handleBookCall = () => setIsBookCallOpen(true);
   const handleGetQuote = () => setIsQuoteOpen(true);

@@ -42,7 +42,7 @@ const Header: React.FC<HeaderProps> = ({ onNavigate, onBookCall }) => {
                   onMouseEnter={() => setActiveDropdown('term')}
                   className={activeDropdown === 'term' ? 'active-nav-item' : ''}
                 >
-                  <a href="#term">Term <span className="dropdown-arrow"></span></a>
+                  <a href="#term" onClick={(e) => { e.preventDefault(); setActiveDropdown(activeDropdown === 'term' ? null : 'term'); }}>Term <span className="dropdown-arrow"></span></a>
                   {activeDropdown === 'term' && (
                     <div className="mega-menu" style={{ width: '800px', left: '-50px' }}>
                       <div className="mega-menu-grid">
@@ -80,7 +80,7 @@ const Header: React.FC<HeaderProps> = ({ onNavigate, onBookCall }) => {
                   onMouseEnter={() => setActiveDropdown('health')}
                   className={activeDropdown === 'health' ? 'active-nav-item' : ''}
                 >
-                  <a href="#health">Health <span className="dropdown-arrow"></span></a>
+                  <a href="#health" onClick={(e) => { e.preventDefault(); setActiveDropdown(activeDropdown === 'health' ? null : 'health'); }}>Health <span className="dropdown-arrow"></span></a>
                   {activeDropdown === 'health' && (
                     <div className="mega-menu" style={{ width: '800px', left: '-50px' }}>
                       <div className="mega-menu-grid">
@@ -113,13 +113,13 @@ const Header: React.FC<HeaderProps> = ({ onNavigate, onBookCall }) => {
                   )}
                 </li>
                 
-                <li><a href="#best-plans">Best Plans</a></li>
+                <li><a href="#best-plans" onClick={(e) => { e.preventDefault(); if (onNavigate) onNavigate('article', 'Term Insurance'); }}>Best Plans</a></li>
                 
                 <li 
                   onMouseEnter={() => setActiveDropdown('decode')}
                   className={activeDropdown === 'decode' ? 'active-nav-item' : ''}
                 >
-                  <a href="#decode-plans">Decode Plans <span className="dropdown-arrow"></span></a>
+                  <a href="#decode-plans" onClick={(e) => { e.preventDefault(); setActiveDropdown(activeDropdown === 'decode' ? null : 'decode'); }}>Decode Plans <span className="dropdown-arrow"></span></a>
                   {activeDropdown === 'decode' && (
                     <div className="mega-menu" style={{ width: '900px', left: '50%', transform: 'translateX(-65%)' }}>
                       <div className="mega-menu-grid">
@@ -157,7 +157,7 @@ const Header: React.FC<HeaderProps> = ({ onNavigate, onBookCall }) => {
                   className={activeDropdown === 'claims' ? 'active-nav-item' : ''}
                   style={{ position: 'relative' }}
                 >
-                  <a href="#claims">Claims <span className="dropdown-arrow"></span></a>
+                  <a href="#claims" onClick={(e) => { e.preventDefault(); setActiveDropdown(activeDropdown === 'claims' ? null : 'claims'); }}>Claims <span className="dropdown-arrow"></span></a>
                   {activeDropdown === 'claims' && (
                     <div className="mega-menu small-dropdown">
                       <div className="dropdown-section">
@@ -194,8 +194,8 @@ const Header: React.FC<HeaderProps> = ({ onNavigate, onBookCall }) => {
             
             <div className="divider"></div>
             
-            <a href="#help" className="help-link">Need Help <span className="dropdown-arrow"></span></a>
-            <a href="#account" className="account-link">My Account</a>
+            <a href="#help" className="help-link" onClick={(e) => { e.preventDefault(); if (onBookCall) onBookCall(); }}>Need Help <span className="dropdown-arrow"></span></a>
+            <a href="#account" className="account-link" onClick={(e) => { e.preventDefault(); alert('My Account coming soon!'); }}>My Account</a>
             
             <button className="btn btn-purple book-call-btn" onClick={onBookCall}>
               <svg className="book-call-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="23 7 16 12 23 17 23 7"></polygon><rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect></svg>

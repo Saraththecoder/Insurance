@@ -9,29 +9,29 @@ gsap.registerPlugin(ScrollTrigger);
 const features = [
   {
     id: '01',
-    title: 'Automated Plan Match',
-    description: 'We crunch through 100s of policies, features, and T&Cs to match you with exactly what you need.',
+    title: 'Book a consultation. Free!',
+    description: 'Insurance terms and fine print can feel overwhelming. That’s why we advise you to book a free consultation with our expert at a time that works for you.',
     color: 'var(--primary-light)',
     mockupImg: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'
   },
   {
     id: '02',
-    title: 'Choose The Right Plan',
-    description: 'Compare coverage, claim settlement ratio, and premiums side-by-side with our community.',
+    title: 'Discover the Right Plan',
+    description: 'With an expert by your side, answer a few quick questions about yourself and your family. Based on your needs and goals, the expert recommends you the most suitable plans with all their terms and conditions.',
     color: '#fdfaee', // Light yellow
     mockupImg: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'
   },
   {
     id: '03',
-    title: 'Clear Terms & Conditions',
-    description: 'Know exactly what is covered and what is not. We simplify the fine print so there are no surprises.',
+    title: 'Take Time & Discuss Again',
+    description: 'Discuss the plan with your loved ones, and bring all your questions, concerns, and constraints to the expert in the second call. Your advisor will patiently guide you, simplify the jargon, and help you make the best choice.',
     color: '#fdeff2', // Light pink
     mockupImg: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'
   },
   {
     id: '04',
-    title: 'Dedicated Support',
-    description: 'Our certified advisors guide you from purchase to claims. We have got your back.',
+    title: 'Buy and Stay Supported',
+    description: 'Once you buy your plan, our support doesn’t stop there. Your Shiva Insurance Advisor will stand by you for life - guiding you one-on-one whenever you need to make a claim.',
     color: '#f3effe', // Light purple
     mockupImg: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'
   }
