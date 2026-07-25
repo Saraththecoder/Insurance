@@ -14,28 +14,34 @@ const Testimonials: React.FC<TestimonialsProps> = ({ onNavigate }) => {
   const containerRef = useRef<HTMLElement>(null);
 
   useGSAP(() => {
-    gsap.from('.testi-text-animate', {
-      scrollTrigger: {
-        trigger: containerRef.current,
-        start: 'top 80%',
-      },
-      x: -50,
-      opacity: 0,
-      duration: 0.8,
-      stagger: 0.2,
-      ease: 'power3.out'
-    });
+    gsap.fromTo('.testi-text-animate', 
+      { x: -50, opacity: 0 },
+      {
+        scrollTrigger: {
+          trigger: containerRef.current,
+          start: 'top 85%',
+        },
+        x: 0,
+        opacity: 1,
+        duration: 0.8,
+        stagger: 0.2,
+        ease: 'power3.out'
+      }
+    );
 
-    gsap.from('.phone-mockup', {
-      scrollTrigger: {
-        trigger: containerRef.current,
-        start: 'top 70%',
-      },
-      y: 50,
-      opacity: 0,
-      duration: 1,
-      ease: 'power3.out'
-    });
+    gsap.fromTo('.phone-mockup', 
+      { y: 50, opacity: 0 },
+      {
+        scrollTrigger: {
+          trigger: containerRef.current,
+          start: 'top 85%',
+        },
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        ease: 'power3.out'
+      }
+    );
   }, { scope: containerRef });
 
   return (

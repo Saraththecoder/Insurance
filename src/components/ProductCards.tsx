@@ -39,28 +39,34 @@ const ProductCards: React.FC<ProductCardsProps> = ({ onGetQuote, onLearnMore }) 
   const containerRef = useRef<HTMLElement>(null);
 
   useGSAP(() => {
-    gsap.from('.section-header-animate', {
-      scrollTrigger: {
-        trigger: containerRef.current,
-        start: 'top 80%',
-      },
-      y: 30,
-      opacity: 0,
-      duration: 0.6,
-      ease: 'power2.out'
-    });
+    gsap.fromTo('.section-header-animate', 
+      { y: 30, opacity: 0 },
+      {
+        scrollTrigger: {
+          trigger: containerRef.current,
+          start: 'top 85%',
+        },
+        y: 0,
+        opacity: 1,
+        duration: 0.6,
+        ease: 'power2.out'
+      }
+    );
 
-    gsap.from('.product-card', {
-      scrollTrigger: {
-        trigger: '.cards-grid',
-        start: 'top 75%',
-      },
-      y: 50,
-      opacity: 0,
-      duration: 0.6,
-      stagger: 0.15,
-      ease: 'power2.out'
-    });
+    gsap.fromTo('.product-card', 
+      { y: 50, opacity: 0 },
+      {
+        scrollTrigger: {
+          trigger: '.cards-grid',
+          start: 'top 85%',
+        },
+        y: 0,
+        opacity: 1,
+        duration: 0.6,
+        stagger: 0.15,
+        ease: 'power2.out'
+      }
+    );
   }, { scope: containerRef });
 
   return (

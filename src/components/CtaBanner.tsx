@@ -14,17 +14,20 @@ const CtaBanner: React.FC<CtaBannerProps> = ({ onBookCall }) => {
   const containerRef = useRef<HTMLElement>(null);
 
   useGSAP(() => {
-    gsap.from('.cta-banner', {
-      scrollTrigger: {
-        trigger: containerRef.current,
-        start: 'top 85%',
-      },
-      scale: 0.95,
-      y: 30,
-      opacity: 0,
-      duration: 0.6,
-      ease: 'back.out(1.2)'
-    });
+    gsap.fromTo('.cta-banner', 
+      { scale: 0.95, y: 30, opacity: 0 },
+      {
+        scrollTrigger: {
+          trigger: containerRef.current,
+          start: 'top 85%',
+        },
+        scale: 1,
+        y: 0,
+        opacity: 1,
+        duration: 0.6,
+        ease: 'back.out(1.2)'
+      }
+    );
   }, { scope: containerRef });
 
   return (
