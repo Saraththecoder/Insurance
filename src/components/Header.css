@@ -17,7 +17,7 @@
 .header-left {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 1.25rem;
 }
 
 .logo {
@@ -32,6 +32,7 @@
   color: var(--text-dark);
   letter-spacing: -0.05em;
   position: relative;
+  white-space: nowrap;
 }
 
 /* Little green leaf accent on the b */
@@ -148,8 +149,8 @@
 .nav-links {
   display: flex;
   list-style: none;
-  gap: 1.5rem;
-  margin-left: 1rem;
+  gap: 1.25rem;
+  margin-left: 0.5rem;
 }
 
 .nav-links > li {
@@ -166,6 +167,7 @@
   align-items: center;
   gap: 0.3rem;
   padding: 0.25rem 0;
+  white-space: nowrap;
 }
 
 .active-nav-item > a {
@@ -403,6 +405,7 @@
   display: flex;
   align-items: center;
   gap: 6px;
+  white-space: nowrap;
 }
 
 .book-call-btn:hover {

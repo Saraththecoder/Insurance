@@ -42,7 +42,7 @@ const Header: React.FC<HeaderProps> = ({ onNavigate, onBookCall }) => {
                   onMouseEnter={() => setActiveDropdown('term')}
                   className={activeDropdown === 'term' ? 'active-nav-item' : ''}
                 >
-                  <a href="#term" onClick={(e) => { e.preventDefault(); setActiveDropdown(activeDropdown === 'term' ? null : 'term'); }}>Term Insurance <span className="dropdown-arrow"></span></a>
+                  <a href="#term" onClick={(e) => { e.preventDefault(); setActiveDropdown(activeDropdown === 'term' ? null : 'term'); }}>Term <span className="dropdown-arrow"></span></a>
                   {activeDropdown === 'term' && (
                     <div className="mega-menu" style={{ width: '800px', left: '-50px' }}>
                       <div className="mega-menu-grid">
@@ -80,7 +80,7 @@ const Header: React.FC<HeaderProps> = ({ onNavigate, onBookCall }) => {
                   onMouseEnter={() => setActiveDropdown('health')}
                   className={activeDropdown === 'health' ? 'active-nav-item' : ''}
                 >
-                  <a href="#health" onClick={(e) => { e.preventDefault(); setActiveDropdown(activeDropdown === 'health' ? null : 'health'); }}>Health Insurance <span className="dropdown-arrow"></span></a>
+                  <a href="#health" onClick={(e) => { e.preventDefault(); setActiveDropdown(activeDropdown === 'health' ? null : 'health'); }}>Health <span className="dropdown-arrow"></span></a>
                   {activeDropdown === 'health' && (
                     <div className="mega-menu" style={{ width: '800px', left: '-50px' }}>
                       <div className="mega-menu-grid">
