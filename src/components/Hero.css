@@ -1,0 +1,165 @@
+.hero {
+  padding: 4rem 0 2rem;
+  background-color: var(--background-alt);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .hero-container {
+    grid-template-columns: 1.2fr 0.8fr;
+  }
+}
+
+.hero-title {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.03em;
+  color: #111827;
+}
+
+@media (min-width: 768px) {
+  .hero-title {
+    font-size: 4.5rem;
+  }
+}
+
+.hero-subtitle {
+  font-size: 1.125rem;
+  color: var(--text-gray);
+  margin-bottom: 1.5rem;
+  max-width: 90%;
+}
+
+@media (min-width: 768px) {
+  .hero-subtitle {
+    font-size: 1.25rem;
+  }
+}
+
+.hero-rating {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.stars {
+  color: #f59e0b;
+  font-size: 1.25rem;
+  letter-spacing: 2px;
+}
+
+.rating-text {
+  font-size: 0.9rem;
+  color: var(--text-gray);
+  font-weight: 500;
+}
+
+.hero-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 500px) {
+  .hero-actions {
+    flex-direction: row;
+  }
+}
+
+.btn-lg {
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  border-radius: var(--radius-full);
+}
+
+.btn-outline {
+  border-color: #d1d5db;
+}
+
+.hero-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.hero-feature-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  font-size: 0.95rem;
+}
+
+.hero-feature-link:hover {
+  color: var(--primary-color);
+}
+
+.feature-icon {
+  font-size: 1.25rem;
+}
+
+.hero-image-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 100%;
+}
+
+.hero-person-placeholder {
+  width: 100%;
+  max-width: 400px;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-image {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: var(--shadow-lg);
+}
+
+/* Add some floating nodes behind the person */
+.hero-floating-elements {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.node {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: var(--white);
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-md);
+  animation: float 6s ease-in-out infinite;
+}
+
+.node-1 { top: 10%; left: 10%; animation-delay: 0s; }
+.node-2 { top: 30%; right: 5%; animation-delay: 1.5s; }
+.node-3 { bottom: 20%; left: 5%; animation-delay: 3s; }
+.node-4 { bottom: 40%; right: 10%; animation-delay: 4.5s; }
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
