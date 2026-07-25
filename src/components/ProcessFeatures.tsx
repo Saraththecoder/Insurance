@@ -10,30 +10,30 @@ const features = [
   {
     id: '01',
     title: 'Book a consultation. Free!',
-    description: 'Insurance terms and fine print can feel overwhelming. That’s why we advise you to book a free consultation with our expert at a time that works for you.',
+    description: "Insurance terms and fine print can feel overwhelming. That's why we advise you to book a free consultation with our expert at a time that works for you.",
     color: 'var(--primary-light)',
-    mockupImg: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'
+    mockupImg: '/consultation.png'
   },
   {
     id: '02',
     title: 'Discover the Right Plan',
     description: 'With an expert by your side, answer a few quick questions about yourself and your family. Based on your needs and goals, the expert recommends you the most suitable plans with all their terms and conditions.',
-    color: '#fdfaee', // Light yellow
-    mockupImg: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'
+    color: '#fdfaee',
+    mockupImg: '/plans_compare.png'
   },
   {
     id: '03',
     title: 'Take Time & Discuss Again',
     description: 'Discuss the plan with your loved ones, and bring all your questions, concerns, and constraints to the expert in the second call. Your advisor will patiently guide you, simplify the jargon, and help you make the best choice.',
-    color: '#fdeff2', // Light pink
-    mockupImg: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'
+    color: '#fdeff2',
+    mockupImg: '/health_insurance.png'
   },
   {
     id: '04',
     title: 'Buy and Stay Supported',
-    description: 'Once you buy your plan, our support doesn’t stop there. Your Shiva Insurance Advisor will stand by you for life - guiding you one-on-one whenever you need to make a claim.',
-    color: '#f3effe', // Light purple
-    mockupImg: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'
+    description: "Once you buy your plan, our support doesn't stop there. Your Shiva Insurance Advisor will stand by you for life - guiding you one-on-one whenever you need to make a claim.",
+    color: '#f3effe',
+    mockupImg: '/claims_support.png'
   }
 ];
 

@@ -47,7 +47,7 @@ const CtaBanner: React.FC<CtaBannerProps> = ({ onBookCall }) => {
             </div>
           </div>
           <div className="cta-video-thumb">
-            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Video thumbnail" className="video-img" />
+            <img src="/claims_support.png" alt="Expert advisor" className="video-img" />
             <div className="play-button">▶</div>
           </div>
         </div>

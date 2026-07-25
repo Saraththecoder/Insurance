@@ -33,6 +33,10 @@ const Hero: React.FC<HeroProps> = ({ onBookCall, onGetQuote }) => {
     <section className="hero" ref={containerRef}>
       <div className="container hero-container">
         <div className="hero-content">
+          <div className="hero-badge hero-animate">
+            <span className="hero-badge-dot"></span>
+            Trusted by 50,000+ Indians
+          </div>
           <h1 className="hero-title hero-animate">The Most Satisfying Way To Buy Insurance</h1>
           <p className="hero-subtitle hero-animate">
             Unbiased advice. Transparent comparison. Smooth claims.
@@ -40,7 +44,7 @@ const Hero: React.FC<HeroProps> = ({ onBookCall, onGetQuote }) => {
           
           <div className="hero-rating hero-animate">
             <span className="stars">★★★★★</span>
-            <span className="rating-text">4.9/5 on Google</span>
+            <span className="rating-text">4.9/5 on Google · 1200+ Reviews</span>
           </div>
 
           <div className="hero-actions hero-animate">
@@ -59,21 +63,35 @@ const Hero: React.FC<HeroProps> = ({ onBookCall, onGetQuote }) => {
               <span className="feature-icon">👥</span> Group Insurance
             </a>
             <a href="#all" className="hero-feature-link">
-              <span className="feature-icon">grid</span> All products
+              <span className="feature-icon">📋</span> All products
             </a>
           </div>
         </div>
         
         <div className="hero-image-wrapper">
           <div className="hero-floating-elements">
-            {/* We can use CSS to create the nodes from the mockup */}
             <div className="node node-1"></div>
             <div className="node node-2"></div>
             <div className="node node-3"></div>
             <div className="node node-4"></div>
           </div>
+          {/* Floating stat badges */}
+          <div className="hero-stat-badge hero-stat-badge-1">
+            <span className="stat-icon">🛡️</span>
+            <div>
+              <strong>₹1 Cr</strong>
+              <small>Cover from ₹400/month</small>
+            </div>
+          </div>
+          <div className="hero-stat-badge hero-stat-badge-2">
+            <span className="stat-icon">⚡</span>
+            <div>
+              <strong>Fast Claims</strong>
+              <small>Settled in 24 hrs</small>
+            </div>
+          </div>
           <div className="hero-person-placeholder">
-            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Insurance Expert" className="hero-image" />
+            <img src="/hero_advisor.png" alt="Insurance Expert" className="hero-image" />
           </div>
         </div>
       </div>
