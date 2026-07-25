@@ -160,7 +160,7 @@ const Header: React.FC<HeaderProps> = ({ onNavigate, onBookCall }) => {
                 >
                   <a href="#claims" onClick={(e) => { e.preventDefault(); setActiveDropdown(activeDropdown === 'claims' ? null : 'claims'); }}>Claims <span className="dropdown-arrow"></span></a>
                   {activeDropdown === 'claims' && (
-                    <div className="mega-menu small-dropdown" style={{ right: '-50px', left: 'auto', transform: 'none' }}>
+                    <div className="mega-menu small-dropdown" style={{ right: 0, left: 'auto', transform: 'none' }}>
                       <div className="dropdown-section">
                         <h4 className="dropdown-heading">New to Shiva Insurance?</h4>
                         <a href="#understand" className="dropdown-link-item" onClick={handleSubOptionClick}>
