@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './Header.css';
 
 interface HeaderProps {
-  onNavigate?: (page: 'home' | 'article', topic?: string) => void;
+  onNavigate?: (page: string, topic?: string) => void;
   onBookCall?: () => void;
 }
 
@@ -11,11 +11,11 @@ const Header: React.FC<HeaderProps> = ({ onNavigate, onBookCall }) => {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  const handleSubOptionClick = (e: React.MouseEvent, topic: string = 'Term Insurance') => {
+  const handleSubOptionClick = (e: React.MouseEvent, page: string) => {
     e.preventDefault();
     setActiveDropdown(null);
     setIsMobileMenuOpen(false);
-    if (onNavigate) onNavigate('article', topic);
+    if (onNavigate) onNavigate(page);
   };
 
   return (
@@ -48,15 +48,15 @@ const Header: React.FC<HeaderProps> = ({ onNavigate, onBookCall }) => {
                       <div className="mega-menu-grid">
                         <div>
                           <h3 className="mega-menu-title">Start Your Journey</h3>
-                          <div className="mega-menu-item" onClick={(e) => handleSubOptionClick(e, 'Term Insurance')} style={{cursor: 'pointer'}}>
+                          <div className="mega-menu-item" onClick={(e) => handleSubOptionClick(e, 'know-term')} style={{cursor: 'pointer'}}>
                             <h4>Know Term Insurance</h4>
                             <p>Know term insurance like a pro. Avoid surprises.</p>
                           </div>
-                          <div className="mega-menu-item" onClick={(e) => handleSubOptionClick(e, 'Term Insurance')} style={{cursor: 'pointer'}}>
+                          <div className="mega-menu-item" onClick={(e) => handleSubOptionClick(e, 'compare-term')} style={{cursor: 'pointer'}}>
                             <h4>Compare Term Insurance</h4>
                             <p>Top plans reviewed for benefits, T&Cs, service experience & claims.</p>
                           </div>
-                          <div className="mega-menu-item" onClick={(e) => handleSubOptionClick(e, 'Term Insurance')} style={{cursor: 'pointer'}}>
+                          <div className="mega-menu-item" onClick={(e) => handleSubOptionClick(e, 'find-term')} style={{cursor: 'pointer'}}>
                             <h4>Find Best Term Plans</h4>
                             <p>End of confusion. Find the term plan that matches your needs. In 3 min.</p>
                           </div>
@@ -64,11 +64,11 @@ const Header: React.FC<HeaderProps> = ({ onNavigate, onBookCall }) => {
                         <div>
                           <h3 className="mega-menu-title">Resources & Guides</h3>
                           <ul className="mega-menu-links">
-                            <li><a href="#articles" onClick={handleSubOptionClick}>Articles (50+)</a></li>
-                            <li><a href="#videos" onClick={handleSubOptionClick}>Videos (50+)</a></li>
-                            <li><a href="#video-guides" onClick={handleSubOptionClick}>Video Guides (50+)</a></li>
-                            <li><a href="#ebook" onClick={handleSubOptionClick}>Download Term eBook</a></li>
-                            <li><a href="#expert" onClick={handleSubOptionClick}>Ask an Expert (500+)</a></li>
+                            <li><a href="#articles" onClick={(e) => handleSubOptionClick(e, 'articles-term')}>Articles (50+)</a></li>
+                            <li><a href="#videos" onClick={(e) => handleSubOptionClick(e, 'videos-term')}>Videos (50+)</a></li>
+                            <li><a href="#video-guides" onClick={(e) => handleSubOptionClick(e, 'video-guides-term')}>Video Guides (50+)</a></li>
+                            <li><a href="#ebook" onClick={(e) => handleSubOptionClick(e, 'ebook-term')}>Download Term eBook</a></li>
+                            <li><a href="#expert" onClick={(e) => handleSubOptionClick(e, 'expert')}>Ask an Expert (500+)</a></li>
                           </ul>
                         </div>
                       </div>
@@ -86,15 +86,15 @@ const Header: React.FC<HeaderProps> = ({ onNavigate, onBookCall }) => {
                       <div className="mega-menu-grid">
                         <div>
                           <h3 className="mega-menu-title">Start Your Journey</h3>
-                          <div className="mega-menu-item" onClick={(e) => handleSubOptionClick(e, 'Health Insurance')} style={{cursor: 'pointer'}}>
+                          <div className="mega-menu-item" onClick={(e) => handleSubOptionClick(e, 'know-health')} style={{cursor: 'pointer'}}>
                             <h4>Know Health Insurance</h4>
                             <p>Know health insurance like a pro. Avoid surprises.</p>
                           </div>
-                          <div className="mega-menu-item" onClick={(e) => handleSubOptionClick(e, 'Health Insurance')} style={{cursor: 'pointer'}}>
+                          <div className="mega-menu-item" onClick={(e) => handleSubOptionClick(e, 'compare-health')} style={{cursor: 'pointer'}}>
                             <h4>Compare Health Insurance</h4>
                             <p>Top plans reviewed for benefits, T&Cs, service experience & claims.</p>
                           </div>
-                          <div className="mega-menu-item" onClick={(e) => handleSubOptionClick(e, 'Health Insurance')} style={{cursor: 'pointer'}}>
+                          <div className="mega-menu-item" onClick={(e) => handleSubOptionClick(e, 'find-health')} style={{cursor: 'pointer'}}>
                             <h4>Find Best Health Plans</h4>
                             <p>End of confusion. Find health insurance that matches your needs. In 3 min.</p>
                           </div>
@@ -102,10 +102,10 @@ const Header: React.FC<HeaderProps> = ({ onNavigate, onBookCall }) => {
                         <div>
                           <h3 className="mega-menu-title">Resources & Guides</h3>
                           <ul className="mega-menu-links">
-                            <li><a href="#articles" onClick={handleSubOptionClick}>Articles (50+)</a></li>
-                            <li><a href="#videos" onClick={handleSubOptionClick}>Videos (50+)</a></li>
-                            <li><a href="#ebook" onClick={handleSubOptionClick}>Critical Illness eBook</a></li>
-                            <li><a href="#expert" onClick={handleSubOptionClick}>Ask an Expert (500+)</a></li>
+                            <li><a href="#articles" onClick={(e) => handleSubOptionClick(e, 'articles-health')}>Articles (50+)</a></li>
+                            <li><a href="#videos" onClick={(e) => handleSubOptionClick(e, 'videos-health')}>Videos (50+)</a></li>
+                            <li><a href="#ebook" onClick={(e) => handleSubOptionClick(e, 'ebook-health')}>Critical Illness eBook</a></li>
+                            <li><a href="#expert" onClick={(e) => handleSubOptionClick(e, 'expert')}>Ask an Expert (500+)</a></li>
                           </ul>
                         </div>
                       </div>
@@ -113,7 +113,7 @@ const Header: React.FC<HeaderProps> = ({ onNavigate, onBookCall }) => {
                   )}
                 </li>
                 
-                <li><a href="#best-plans" onClick={(e) => { e.preventDefault(); if (onNavigate) onNavigate('article', 'Term Insurance'); }}>Best Plans</a></li>
+                <li><a href="#best-plans" onClick={(e) => handleSubOptionClick(e, 'best-plans')}>Best Plans</a></li>
                 
                 <li 
                   onMouseEnter={() => setActiveDropdown('decode')}
@@ -127,26 +127,26 @@ const Header: React.FC<HeaderProps> = ({ onNavigate, onBookCall }) => {
                         <div>
                           <h3 className="mega-menu-title">Health Insurance Decoder</h3>
                           <ul className="decoder-list">
-                            <li><span className="brand-placeholder" style={{backgroundColor: '#eab308'}}>care</span> Care Insurance Ultimate Care + Key Add-ons</li>
-                            <li><span className="brand-placeholder" style={{backgroundColor: '#dc2626', color: 'white'}}>HDFC ERGO</span> HDFC Ergo Optima Secure + Key Add-ons</li>
-                            <li><span className="brand-placeholder" style={{backgroundColor: '#1d4ed8', color: 'white'}}>TATA AIG</span> Tata AIG MediCare Premier + Key Add-ons</li>
-                            <li><span className="brand-placeholder" style={{backgroundColor: '#38bdf8'}}>niva</span> Niva Bupa Aspire (Titanium+) + Key Add-ons</li>
-                            <li><span className="brand-placeholder" style={{backgroundColor: '#3b82f6', color: 'white'}}>STAR</span> Star Health Super Star + Key Add-ons</li>
-                            <li><span className="brand-placeholder" style={{backgroundColor: '#2dd4bf'}}>zuno</span> Zuno Health Insurance (Gold)</li>
+                            <li onClick={(e) => handleSubOptionClick(e, 'decode-care')} style={{cursor: 'pointer'}}><span className="brand-placeholder" style={{backgroundColor: '#eab308'}}>care</span> Care Insurance Ultimate Care + Key Add-ons</li>
+                            <li onClick={(e) => handleSubOptionClick(e, 'decode-hdfc-ergo')} style={{cursor: 'pointer'}}><span className="brand-placeholder" style={{backgroundColor: '#dc2626', color: 'white'}}>HDFC ERGO</span> HDFC Ergo Optima Secure + Key Add-ons</li>
+                            <li onClick={(e) => handleSubOptionClick(e, 'decode-tata-aig')} style={{cursor: 'pointer'}}><span className="brand-placeholder" style={{backgroundColor: '#1d4ed8', color: 'white'}}>TATA AIG</span> Tata AIG MediCare Premier + Key Add-ons</li>
+                            <li onClick={(e) => handleSubOptionClick(e, 'decode-niva')} style={{cursor: 'pointer'}}><span className="brand-placeholder" style={{backgroundColor: '#38bdf8'}}>niva</span> Niva Bupa Aspire (Titanium+) + Key Add-ons</li>
+                            <li onClick={(e) => handleSubOptionClick(e, 'decode-star')} style={{cursor: 'pointer'}}><span className="brand-placeholder" style={{backgroundColor: '#3b82f6', color: 'white'}}>STAR</span> Star Health Super Star + Key Add-ons</li>
+                            <li onClick={(e) => handleSubOptionClick(e, 'decode-zuno')} style={{cursor: 'pointer'}}><span className="brand-placeholder" style={{backgroundColor: '#2dd4bf'}}>zuno</span> Zuno Health Insurance (Gold)</li>
                           </ul>
-                          <button className="btn-view-all" onClick={(e) => handleSubOptionClick(e, 'Health Insurance')}>View All <span style={{marginLeft: '4px'}}>→</span></button>
+                          <button className="btn-view-all" onClick={(e) => handleSubOptionClick(e, 'compare-health')}>View All <span style={{marginLeft: '4px'}}>→</span></button>
                         </div>
                         <div>
                           <h3 className="mega-menu-title">Savings Plan Decoder</h3>
                           <ul className="decoder-list">
-                            <li><span className="brand-placeholder" style={{backgroundColor: '#eab308'}}>LIC</span> LIC Bima Jyoti</li>
-                            <li><span className="brand-placeholder" style={{backgroundColor: '#dc2626', color: 'white'}}>HDFC Life</span> HDFC Life Sanchay Fixed Maturity</li>
-                            <li><span className="brand-placeholder" style={{backgroundColor: '#1d4ed8', color: 'white'}}>BAJAJ</span> Bajaj Life Goal Suraksha</li>
-                            <li><span className="brand-placeholder" style={{backgroundColor: '#38bdf8'}}>SBI Life</span> SBI Life Smart Platina Assure</li>
-                            <li><span className="brand-placeholder" style={{backgroundColor: '#dc2626', color: 'white'}}>ABSLI</span> ABSLI Assured Savings</li>
-                            <li><span className="brand-placeholder" style={{backgroundColor: '#1d4ed8', color: 'white'}}>TATA AIA</span> TATA AIA Diamond Savings Plan</li>
+                            <li onClick={(e) => handleSubOptionClick(e, 'decode-lic')} style={{cursor: 'pointer'}}><span className="brand-placeholder" style={{backgroundColor: '#eab308'}}>LIC</span> LIC Bima Jyoti</li>
+                            <li onClick={(e) => handleSubOptionClick(e, 'decode-hdfc-life')} style={{cursor: 'pointer'}}><span className="brand-placeholder" style={{backgroundColor: '#dc2626', color: 'white'}}>HDFC Life</span> HDFC Life Sanchay Fixed Maturity</li>
+                            <li onClick={(e) => handleSubOptionClick(e, 'decode-bajaj')} style={{cursor: 'pointer'}}><span className="brand-placeholder" style={{backgroundColor: '#1d4ed8', color: 'white'}}>BAJAJ</span> Bajaj Life Goal Suraksha</li>
+                            <li onClick={(e) => handleSubOptionClick(e, 'decode-sbi')} style={{cursor: 'pointer'}}><span className="brand-placeholder" style={{backgroundColor: '#38bdf8'}}>SBI Life</span> SBI Life Smart Platina Assure</li>
+                            <li onClick={(e) => handleSubOptionClick(e, 'decode-absli')} style={{cursor: 'pointer'}}><span className="brand-placeholder" style={{backgroundColor: '#dc2626', color: 'white'}}>ABSLI</span> ABSLI Assured Savings</li>
+                            <li onClick={(e) => handleSubOptionClick(e, 'decode-tata-aia')} style={{cursor: 'pointer'}}><span className="brand-placeholder" style={{backgroundColor: '#1d4ed8', color: 'white'}}>TATA AIA</span> TATA AIA Diamond Savings Plan</li>
                           </ul>
-                          <button className="btn-view-all" onClick={(e) => handleSubOptionClick(e, 'Savings Plan')}>View All <span style={{marginLeft: '4px'}}>→</span></button>
+                          <button className="btn-view-all" onClick={(e) => handleSubOptionClick(e, 'best-plans')}>View All <span style={{marginLeft: '4px'}}>→</span></button>
                         </div>
                       </div>
                     </div>
@@ -163,7 +163,7 @@ const Header: React.FC<HeaderProps> = ({ onNavigate, onBookCall }) => {
                     <div className="mega-menu small-dropdown" style={{ right: 0, left: 'auto', transform: 'none' }}>
                       <div className="dropdown-section">
                         <h4 className="dropdown-heading">New to Shiva Insurance?</h4>
-                        <a href="#understand" className="dropdown-link-item" onClick={handleSubOptionClick}>
+                        <a href="#understand" className="dropdown-link-item" onClick={(e) => handleSubOptionClick(e, 'claims-understand')}>
                           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><circle cx="10" cy="13" r="2"></circle><path d="M10 15v1"></path></svg>
                           Understand the Claim Process
                         </a>
@@ -171,11 +171,11 @@ const Header: React.FC<HeaderProps> = ({ onNavigate, onBookCall }) => {
                       <div className="dropdown-divider"></div>
                       <div className="dropdown-section">
                         <h4 className="dropdown-heading">Existing User?</h4>
-                        <a href="#intimate" className="dropdown-link-item" onClick={handleSubOptionClick}>
+                        <a href="#intimate" className="dropdown-link-item" onClick={(e) => handleSubOptionClick(e, 'claims-intimate')}>
                           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
                           Intimate a Claim
                         </a>
-                        <a href="#support" className="dropdown-link-item" onClick={handleSubOptionClick}>
+                        <a href="#support" className="dropdown-link-item" onClick={(e) => handleSubOptionClick(e, 'claims-support')}>
                           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 18v-6a9 9 0 0 1 18 0v6"></path><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path></svg>
                           Support/Escalations
                         </a>
@@ -225,9 +225,9 @@ const Header: React.FC<HeaderProps> = ({ onNavigate, onBookCall }) => {
               <div className="search-categories">
                 <h3>Top Categories</h3>
                 <ul>
-                  <li><a href="#term-life" onClick={(e) => { setIsSearchOpen(false); handleSubOptionClick(e); }}># Term Life Insurance</a></li>
-                  <li><a href="#health-insurance" onClick={(e) => { setIsSearchOpen(false); handleSubOptionClick(e); }}># Health Insurance</a></li>
-                  <li><a href="#parents-health" onClick={(e) => { setIsSearchOpen(false); handleSubOptionClick(e); }}># Parent's Health</a></li>
+                  <li><a href="#term-life" onClick={(e) => { setIsSearchOpen(false); handleSubOptionClick(e, 'know-term'); }}># Term Life Insurance</a></li>
+                  <li><a href="#health-insurance" onClick={(e) => { setIsSearchOpen(false); handleSubOptionClick(e, 'know-health'); }}># Health Insurance</a></li>
+                  <li><a href="#parents-health" onClick={(e) => { setIsSearchOpen(false); handleSubOptionClick(e, 'compare-health'); }}># Parent's Health</a></li>
                 </ul>
               </div>
               <div className="search-illustration">
